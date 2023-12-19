@@ -372,3 +372,10 @@ function getTaskBelow(id){
     moveTo(status);
  }
 
+
+function doNotCloseAddTask(event) {
+    if (event.target.matches('.doNotCloseElement')) {
+        event.stopPropagation();
+    }
+}
+

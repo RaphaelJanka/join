@@ -90,27 +90,20 @@ function sortByFirstName() {
     });
 }
 
-
-/**
- * This function allows to close one of the dropdowns, when you click outside of the dropdwon
- * @param {symbol} event 
- */
 window.onclick = function (event) {
     if (event.target.matches('.dropBtnContacts')) {
         toggleDropdown('contact');
-    }
-    else if (!event.target.matches('.notHide')) {
+    } else if (!event.target.matches('.notHide')) {
         styleContactDropdownBack();
     }
+    
     if (event.target.matches('.selectDropdownBtn')) {
         toggleDropdown('category');
         document.getElementById('select').style.borderColor = '#29ABE2';
-    }
-    else if (!event.target.matches('.notHide')) {
+    } else if (!event.target.matches('.notHide')) {
         styleSelectDropdownBack();
     }
 }
-
 
 /**
  * This function switches the dropdown of contacts back (closing)
@@ -129,7 +122,7 @@ function styleContactDropdownBack() {
  * This function switches the dropdown of category back (closing)
  */
 function styleSelectDropdownBack() {
-    var dropdowns = document.getElementById("content");
+    let dropdowns = document.getElementById("content");
     let dropdownBtn = document.getElementById('select');
     let dropArrow1 = document.getElementById('drop_2');
     dropArrow1.classList.remove('switch');
