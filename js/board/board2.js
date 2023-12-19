@@ -372,7 +372,11 @@ function getTaskBelow(id){
     moveTo(status);
  }
 
-
+/**
+ * Prevents the closing of the addTask form by stopping the propagation of the click event.
+ * This function is intended to be used as an event handler to keep certain elements from closing the form.
+ * @param {Event} event - The click event.
+ */
 function doNotCloseAddTask(event) {
     if (event.target.matches('.doNotCloseElement')) {
         event.stopPropagation();

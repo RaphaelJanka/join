@@ -90,6 +90,11 @@ function sortByFirstName() {
     });
 }
 
+
+/**
+ * This function allows to close one of the dropdowns, when you click outside of the dropdown
+ * @param {Event} event 
+ */
 window.onclick = function (event) {
     if (event.target.matches('.dropBtnContacts')) {
         toggleDropdown('contact');
@@ -104,6 +109,7 @@ window.onclick = function (event) {
         styleSelectDropdownBack();
     }
 }
+
 
 /**
  * This function switches the dropdown of contacts back (closing)
